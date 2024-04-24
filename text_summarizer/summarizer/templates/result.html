@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .summary-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4CAF50;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Summarized Text</h2>
+    <div class="summary-container">
+        <p>{{ uploaded_text.summarized_text }}</p>
+    </div>
+    <a class="back-link" href="{% url 'summarizer:upload_text' %}">Back to Upload Text</a>
+</body>
+</html>
